@@ -1,0 +1,31 @@
+plugins {
+    id("com.android.library")
+    id("kotlin-android")
+    id("kotlin-android-extensions")
+    id("androidx.navigation.safeargs.kotlin")
+    id("com.batzalcancia.typicode.library")
+}
+
+android {
+    defaultConfig {
+        versionName = "1.0.0"
+    }
+    productFlavors {
+        getByName("dev") {
+            dimension = "environment"
+            versionCode = 1
+            versionNameSuffix = "-dev+1"
+        }
+
+    }
+    buildTypes {
+        getByName("debug") {
+            versionNameSuffix = "+debug"
+        }
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+
