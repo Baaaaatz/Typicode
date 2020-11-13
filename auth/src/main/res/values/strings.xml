@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="label_register">Register</string>
+    <string name="label_register_no_account">Don\'t have an account yet? Register!</string>
+    <string name="label_login">Login</string>
+    <string name="hint_country">Country</string>
+    <string name="generic_error_message">Something went wrong</string>
+</resources>

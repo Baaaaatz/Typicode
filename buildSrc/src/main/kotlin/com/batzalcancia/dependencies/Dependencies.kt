@@ -21,7 +21,7 @@ object Dependencies {
     const val APPCOMPAT = "androidx.appcompat:appcompat:1.2.0"
     const val CORE_KTX = "androidx.core:core-ktx:1.3.2"
     const val ACTIVITY_KTX = "androidx.activity:activity-ktx:1.2.0-beta01"
-    const val FRAGMENT_KTX = "androidx.fragment:fragment-ktx:${Versions.FRAGMENT}"
+    const val FRAGMENT_KTX = "androidx.fragment:fragment-ktx:1.2.5"
     const val SWIPE_REFRESH_LAYOUT = "androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01"
     const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.2.0-alpha06"
     const val DATASTORE = "androidx.datastore:datastore-preferences:1.0.0-alpha02"
@@ -65,4 +65,10 @@ object Dependencies {
     //hilt-viewmodels
     const val DAGGER_HILT_VIEWMODEL = "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02"
     const val DAGGER_HILT_VIEWMODEL_KAPT = "androidx.hilt:hilt-compiler:1.0.0-alpha02"
+
+    //kotlin serializer
+    const val KOTLIN_SERIALIZER = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1"
+
+    const val GOOGLE_MAPS = "com.google.android.gms:play-services-maps:17.0.0"
+    const val GOOGLE_LOCATION = "com.google.android.gms:play-services-location:17.0.0"
 }

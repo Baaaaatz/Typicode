@@ -4,6 +4,7 @@ plugins {
     id("kotlin-android-extensions")
     id("kotlin-kapt")
     id("com.batzalcancia.typicode.app")
+    id("dagger.hilt.android.plugin")
     id("androidx.navigation.safeargs.kotlin")
 }
 
@@ -32,8 +33,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":android:core"))
-    implementation(project(":android:auth"))
-    implementation(project(":android:users"))
+    implementation(project("::core"))
+    implementation(project("::auth"))
+    implementation(project("::users"))
 }
-

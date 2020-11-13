@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/login">
+
+    <action
+        android:id="@+id/action_global_to_users"
+        app:destination="@id/users"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/nav_default_exit_anim"
+        app:popUpTo="@id/nav_main"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.batzalcancia.auth.presentation.features.login.LoginFragment">
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/register"
+            app:popUpTo="@id/login" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/register"
+        android:name="com.batzalcancia.auth.presentation.features.register.RegisterFragment" />
+
+    <fragment
+        android:id="@+id/users"
+        android:name="com.batzalcancia.users.presentation.UsersFragment"
+        android:label="Users">
+        <action
+            android:id="@+id/action_users_to_user_details"
+            app:destination="@id/user_details" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/user_details"
+        android:name="com.batzalcancia.users.presentation.UserDetailsFragment">
+
+        <argument
+            android:name="userDetails"
+            app:argType="string"
+            app:nullable="false" />
+
+    </fragment>
+
+</navigation>

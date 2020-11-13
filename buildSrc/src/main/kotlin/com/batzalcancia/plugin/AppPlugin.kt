@@ -18,7 +18,6 @@ open class AppPlugin: Plugin<Project> {
         target.configureDependencies()
     }
 
-
     private fun AppExtension.configureApplication() {
         configureAndroid()
 
@@ -27,20 +26,6 @@ open class AppPlugin: Plugin<Project> {
                 applicationIdSuffix = ".debug"
                 versionNameSuffix = "+debug"
             }
-//            getByName("release") {
-//                signingConfig = signingConfigs.getByName("release")
-//
-//                isCrunchPngs = true
-//                isMinifyEnabled = true
-//                isShrinkResources = true
-//
-//                proguardFiles(
-//                    getDefaultProguardFile("proguard-android-optimize.txt"),
-//                    "proguard-rules.pro"
-//                )
-//
-//                isZipAlignEnabled = true
-//            }
         }
 
         productFlavors {

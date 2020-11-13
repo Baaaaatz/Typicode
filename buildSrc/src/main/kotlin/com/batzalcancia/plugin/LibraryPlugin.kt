@@ -6,15 +6,17 @@ import org.gradle.api.Project
 import org.gradle.kotlin.dsl.getByType
 import com.batzalcancia.plugin.configs.configureAndroid
 import com.batzalcancia.plugin.configs.configureDependencies
+import com.batzalcancia.plugin.configs.configureTestDependencies
 import org.gradle.api.JavaVersion
 
-internal class LibraryPlugin : Plugin<Project> {
+open class LibraryPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         val libraryExtension = target.extensions.getByType<LibraryExtension>()
 
         libraryExtension.configureLibrary()
 
         target.configureDependencies()
+        target.configureTestDependencies()
     }
 
 
